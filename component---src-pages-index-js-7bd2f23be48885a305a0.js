@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{RXBc:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),c=t.n(a),o=t("Wbzz"),u=t("IRuU");n.default=function(){return c.a.createElement(u.a,null,c.a.createElement(o.Link,{to:"/home"},"亲爱的小美"))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-7bd2f23be48885a305a0.js.map
