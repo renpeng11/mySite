@@ -1,72 +1,57 @@
 const menus = [
   {
     title: "Home",
-    // icon:"",
     path: '/home'
   },
   {
-    title: "school",
-    // icon:"",
-    path: '/school'
+    title: "git",
+    path: '/git'
   },
   {
-    title: "company",
-    // icon:"",
-    path: '/company'
+    title: "Gatsby",
+    path: '/gatsby'
   },
   {
-    title: "hospital",
-    // icon:"",
-    path: '/hospital'
+    title: "styled-components",
+    path: "/styledComponents"
   },
   {
-    title: "content",
-    // icon:"",
+    title: "CSS",
     routes: [
       {
-        category: "内容1",
+        name: "伪类&伪元素",
+        path: "/css/fakeClass"
+      },
+      {
+        name: "盒模型",
+        path: "/css/box"
+      },
+      {
+        name: "渐变",
+        path: "/css/linearGradient"
+      },
+      {
+        name: "background-clip",
+        path: "/css/backgroundClip"
+      },
+    ]
+  },
+  {
+    title: "Vue",
+    routes: [
+      {
+        category: "Vue 全家桶",
         components: [
           {
-            name: "内容1.1",
-            path: "/contents1.1"
-          },
-          {
-            name: "内容1.2",
-            path: "/contents1.2"
+            name: "Vuex",
+            path: "/vue/family/vuex"
           },
         ]
       },
-      {
-        category: "内容2",
-        components: [
-          {
-            name: "内容2.1",
-            path: "/contents2.1"
-          },
-          {
-            name: "内容2.2",
-            path: "/contents2.2"
-          },
-        ]
-      },
-      {
-        category: "内容3",
-        components: [
-          {
-            name: "内容3.1",
-            path: "/contents3.1"
-          },
-          {
-            name: "内容3.2",
-            path: "/contents3.2"
-          },
-        ]
-      }
     ]
   },
   {
     title: "react",
-    // icon:"",
     routes: [
       {
         name: "Context",
@@ -76,45 +61,19 @@ const menus = [
         category: "Hook",
         components: [
           {
-            name: "State",
-            path: "/react/hook/state"
+            name: "useState",
+            path: "/react/hook/useState"
           },
           {
-            name: "effect",
-            path: "/react/hook/effect"
+            name: "useEffect",
+            path: "/react/hook/useEffect"
           },
           {
-            name: "refs",
-            path: "/react/hook/refs"
+            name: "useRef",
+            path: "/react/hook/useRef"
           },
         ]
       },
-      {
-        category: "内容22",
-        components: [
-          {
-            name: "内容22.1",
-            path: "/contents22.1"
-          },
-          {
-            name: "内容22.2",
-            path: "/contents22.2"
-          },
-        ]
-      },
-      {
-        category: "内容23",
-        components: [
-          {
-            name: "内容23.1",
-            path: "/contents23.1"
-          },
-          {
-            name: "内容23.2",
-            path: "/contents23.2"
-          },
-        ]
-      }
     ]
   },
 ]

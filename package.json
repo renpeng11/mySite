@@ -19,10 +19,12 @@
     "gatsby-plugin-sharp": "^2.3.3",
     "gatsby-source-filesystem": "^2.1.38",
     "gatsby-transformer-sharp": "^2.3.5",
+    "gh-pages": "^2.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "styled-components": "^4.4.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
@@ -38,7 +40,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "gh-deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",

@@ -29,10 +29,9 @@ const MyEffect = () => {
 
 const effectPage = () => {
   return (
-    <MyBlogLayout>
+    <MyBlogLayout title="useEffect">
       <div>useEffect 可以在组件渲染后实现各种不同的副作用。有些副作用可能需要清除，所以需要返回一个函数</div>
-      <br></br>
-      {/* <Count /> */}
+      <Count />
       <MyEffect />
     </MyBlogLayout>
   )

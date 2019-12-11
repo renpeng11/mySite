@@ -1,18 +1,6 @@
-import React, { useState, useRef, createRef } from "react";
+import React, { createRef } from "react";
 
 import MyBlogLayout from "../../../Layouts";
-
-const Count = (props) => {
-  const [count, setCount] = useState(0);
-  console.log(props.rp.current);
-  const myRefs = useRef();
-  return (
-    <div>
-      {count}
-      <button onClick={() => { setCount(count + 1) }}>点击</button>
-    </div>
-  )
-}
 
 class Div extends React.Component {
   constructor(props) {
@@ -33,19 +21,15 @@ class MyRefs extends React.Component {
   constructor(props) {
     super(props);
     this.myRef = createRef(0);
-    this.secondRef = createRef(1);
     this.getText = this.getText.bind(this);
   }
   getText() {
     this.myRef.current.go();
-    console.log(this.secondRef.current);
   }
   render() {
     return (
       <>
-        {/* <div ref={this.myRef}>亻壬 月 月 鸟</div> */}
         <Div ref={this.myRef}></Div>
-        <Count ref={this.secondRef} />
         <button onClick={this.getText}>点击</button>
       </>
     )
@@ -54,8 +38,7 @@ class MyRefs extends React.Component {
 
 const refPage = () => {
   return (
-    <MyBlogLayout>
-      <div>ref</div>
+    <MyBlogLayout title="Ref">
       <MyRefs />
     </MyBlogLayout>
   )

@@ -27,7 +27,7 @@ class OldDiv extends React.Component {
 
 const homePage = () => {
   return (
-    <MyContext.Provider value={{ name: "我叫任鹏" }}>
+    <MyContext.Provider value={{ name: "我叫小美" }}>
       <MyBlogLayout>
         <NewDiv />
         <OldDiv />
