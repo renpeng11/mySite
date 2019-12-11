@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{JA9X:function(n,t,e){"use strict";e.r(t);var a=e("q1tI"),u=e.n(a),c=e("IRuU");t.default=function(){return u.a.createElement(c.a,{title:"盒模型"},"...")}}}]);
+//# sourceMappingURL=component---src-pages-css-box-js-610a25954ea7179fd4ae.js.map

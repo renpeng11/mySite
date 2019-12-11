@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{"jKc+":function(n,t,e){"use strict";e.r(t);var a=e("q1tI"),c=e.n(a),u=e("IRuU");t.default=function(){return c.a.createElement(u.a,{title:"伪类&伪元素"},"...")}}}]);
+//# sourceMappingURL=component---src-pages-css-fake-class-js-b1553acec532ca05c006.js.map

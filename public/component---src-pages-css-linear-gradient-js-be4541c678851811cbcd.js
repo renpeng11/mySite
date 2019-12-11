@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{"0W0F":function(n,t,e){"use strict";e.r(t);var a=e("q1tI"),u=e.n(a),c=e("IRuU");t.default=function(){return u.a.createElement(c.a,{title:"渐变"},"...")}}}]);
+//# sourceMappingURL=component---src-pages-css-linear-gradient-js-be4541c678851811cbcd.js.map

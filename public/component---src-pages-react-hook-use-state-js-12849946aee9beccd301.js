@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{LBeu:function(e,t,n){"use strict";n.r(t);var a=n("ODXe"),l=n("q1tI"),u=n.n(l),c=n("IRuU"),r=function(){var e=Object(l.useState)(0),t=Object(a.a)(e,2),n=t[0],c=t[1];return u.a.createElement("div",null,n,u.a.createElement("button",{onClick:function(){c(n+1)}},"点击"))};t.default=function(){return u.a.createElement(c.a,null,u.a.createElement("div",null,"我是state"),u.a.createElement("br",null),u.a.createElement(r,null))}}}]);
+//# sourceMappingURL=component---src-pages-react-hook-use-state-js-12849946aee9beccd301.js.map
