@@ -1,49 +1,53 @@
+/*
+ * title、category、name 表示菜单名的 key，与多语言切换对应
+ */
+
 const menus = [
   {
-    title: "Home",
+    title: "HOME",
     path: '/home'
   },
   {
-    title: "git",
+    title: "GIT",
     path: '/git'
   },
   {
-    title: "Gatsby",
+    title: "GATSBY",
     path: '/gatsby'
   },
   {
-    title: "styled-components",
+    title: "STYLED-COMPONENTS",
     path: "/styledComponents"
   },
   {
     title: "CSS",
     routes: [
       {
-        name: "伪类&伪元素",
+        name: "PSEUDO",
         path: "/css/fakeClass"
       },
       {
-        name: "盒模型",
+        name: "BOX",
         path: "/css/box"
       },
       {
-        name: "渐变",
+        name: "GRADIENT",
         path: "/css/linearGradient"
       },
       {
-        name: "background-clip",
+        name: "BG",
         path: "/css/backgroundClip"
       },
     ]
   },
   {
-    title: "Vue",
+    title: "VUE",
     routes: [
       {
-        category: "Vue 全家桶",
+        category: "VUE-FAMILY",
         components: [
           {
-            name: "Vuex",
+            name: "VUEX",
             path: "/vue/family/vuex"
           },
         ]
@@ -51,25 +55,25 @@ const menus = [
     ]
   },
   {
-    title: "react",
+    title: "REACT",
     routes: [
       {
-        name: "Context",
+        name: "CONTEXT",
         path: "/react/context"
       },
       {
-        category: "Hook",
+        category: "HOOK",
         components: [
           {
-            name: "useState",
+            name: "USE-STATE",
             path: "/react/hook/useState"
           },
           {
-            name: "useEffect",
+            name: "USE-EFFECT",
             path: "/react/hook/useEffect"
           },
           {
-            name: "useRef",
+            name: "USE-REF",
             path: "/react/hook/useRef"
           },
         ]

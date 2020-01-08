@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from "react";
+import { observer } from "mobx-react";
 import styled from "styled-components";
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Layout } from "antd";
 import MySider from "./MySider";
 import MyHeader from "./Header";
+import Footer from "./Footer";
+import LayoutContext from "../context/LayoutContext";
+import LanguageData from "../mobx/index";
+
+const languageData = new LanguageData();
 
 const { Header } = Layout;
 
-const { Footer, Content } = Layout;
+const { Content } = Layout;
 
 const WrapLayoutStyle = styled(Layout)`
   & {
@@ -33,10 +39,6 @@ const ContentHeader = styled(Header)`
   padding: 0;
 `
 
-const FooterStyle = styled(Footer)`
-  height: 64px;
-`
-
 const MyBlogLayout = ({ children, title }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -49,14 +51,18 @@ const MyBlogLayout = ({ children, title }) => {
   `);
   const [currentPath, setCurrentPath] = useState("");
   useEffect(() => {
-    console.log(window.location.pathname);
     setCurrentPath(window.location.pathname);
   }, [])
 
+  // 切换语言
+  function selectLanguage(type = "zh-CN") {
+    languageData.changeLanguage(type)
+  }
+
   return (
-    <>
+    <LayoutContext.Provider value={languageData.language}>
       <WrapLayoutStyle>
-        <MyHeader data={data} />
+        <MyHeader data={data} event={selectLanguage} />
         <Layout style={{ background: "#fff" }}>
           <MySider selectedKeys={[currentPath]} />
           <ContentStyle>
@@ -64,12 +70,12 @@ const MyBlogLayout = ({ children, title }) => {
               <ContentHeader>{title}</ContentHeader>
               {children}
             </div>
-            <FooterStyle style={{ background: "black", color: "white", textAlign: "center" }}><div>亻壬 月 月 鸟</div></FooterStyle>
+            <Footer />
           </ContentStyle>
 
         </Layout>
       </WrapLayoutStyle>
-    </>
+    </LayoutContext.Provider>
   )
 }
 
@@ -77,5 +83,4 @@ MyBlogLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-
-export default MyBlogLayout;
+export default observer(MyBlogLayout);
