@@ -9,6 +9,7 @@ export default {
     "GIT": "代码管理",
     "GATSBY": "盖茨比",
     "STYLED-COMPONENTS": "Styled-components",
+    "AXIOS": "axios",
     "CSS": "层叠样式",
     "PSEUDO": "伪类&伪元素",
     "BOX": "盒模型",

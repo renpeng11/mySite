@@ -20,6 +20,10 @@ const menus = [
     path: "/styledComponents"
   },
   {
+    title: "AXIOS",
+    path: "/axios"
+  },
+  {
     title: "CSS",
     routes: [
       {

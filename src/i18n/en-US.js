@@ -9,6 +9,7 @@ export default {
     "GIT": "Git",
     "GATSBY": "Gatsby",
     "STYLED-COMPONENTS": "Styled-components",
+    "AXIOS":"axios",
     "CSS": "Css",
     "PSEUDO": "Pseudo-class & Pseudo-element",
     "BOX": "Box model",

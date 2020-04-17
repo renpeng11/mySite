@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 import { Layout, Button } from "antd";
-import LogoIcon from "../assets/icons/panda.png";
+import LogoIcon from "../assets/icons/turtle.png";
 
 import WithLanguage from "../hoc/hoc";
 

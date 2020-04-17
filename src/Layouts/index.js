@@ -9,6 +9,10 @@ import MyHeader from "./Header";
 import Footer from "./Footer";
 import LayoutContext from "../context/LayoutContext";
 import LanguageData from "../mobx/index";
+import user from "../assets/icons/panda.png";
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+
+deckDeckGoHighlightElement();
 
 const languageData = new LanguageData();
 
@@ -21,6 +25,7 @@ const WrapLayoutStyle = styled(Layout)`
     position: absolute;
     width: 100%;
     height: 100%;
+    font-family: -apple-system,BlinkMacSystemFont,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
     background: #fff;
   }
 `
@@ -37,9 +42,34 @@ const ContentStyle = styled(Content)`
 const ContentHeader = styled(Header)`
   background: #fff;
   padding: 0;
+  height: unset;
+  line-height: unset;
+  margin-bottom: 20px;
+  .user-wrap {
+    display: flex;
+    align-items: center;
+    .user {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+    .right-wrap {
+      width: 25%;
+      .user-right-top {
+        font-weight: bold;
+      }
+      .user-right-bottom {
+        color: gray;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
 `
 
-const MyBlogLayout = ({ children, title }) => {
+const MyBlogLayout = (props) => {
+  const { children, title, date, timeToRead, tags } = props;
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -67,7 +97,21 @@ const MyBlogLayout = ({ children, title }) => {
           <MySider selectedKeys={[currentPath]} />
           <ContentStyle>
             <div style={{ paddingLeft: 64 }}>
-              <ContentHeader>{title}</ContentHeader>
+              {title && date && (<ContentHeader>
+                <h1>{title}</h1>
+                <div className="user-wrap">
+                  <img className="user" src={user} alt="header"></img>
+                  <div className="right-wrap">
+                    <div className="user-right-top">
+                      亻壬 月 月 鸟
+                    </div>
+                    <div className="user-right-bottom">
+                      <span>{date}</span>
+                      <span>阅读完这篇文章需要{timeToRead}分钟</span>
+                    </div>
+                  </div>
+                </div>
+              </ContentHeader>)}
               {children}
             </div>
             <Footer />
