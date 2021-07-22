@@ -38,7 +38,7 @@
     "react-html-table-to-excel": "^2.0.0",
     "react-intl": "^3.9.3",
     "styled-components": "^4.4.1",
-    "xlsx": "^0.15.6"
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
